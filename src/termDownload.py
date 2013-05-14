@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+#Author David Vincent
+#Permission to distribute and modify as desired is granted as long as following requirements are met:
+#       Document changes made
+#       Document name of authors
+
 import urllib
 import json
 import sys
