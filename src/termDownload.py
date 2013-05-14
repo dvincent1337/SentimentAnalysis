@@ -12,6 +12,7 @@ def printUsage():
 	print output
 	print ""
 	print "\tNOTE: This program sends data to stdout, and status to stderr"
+	print "\tNOTE: The data is in ast format!"
 	print ""
 
 def main():
