@@ -15,6 +15,9 @@ def printUsage():
 	print ""
 
 def main():
+	if len(sys.argv)<2:
+		printUsage()
+		return
 	count = 0
 	while True:
 		termFile = open(sys.argv[1])
