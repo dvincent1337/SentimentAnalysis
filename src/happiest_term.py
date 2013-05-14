@@ -131,7 +131,7 @@ def printUsage():
 	print output
 	print ""
 def main():
-	if len(sys.argv) < 5:
+	if len(sys.argv) < 4:
 		printUsage()
 		return	
 	#hide cursor (linux):
