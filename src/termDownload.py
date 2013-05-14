@@ -3,16 +3,30 @@ import urllib
 import json
 import sys
 
-count = 0
-while True:
-	termFile = open(sys.argv[1])
-	for line in termFile:
-		response = urllib.urlopen("http://search.twitter.com/search.json?q="+line)
-		data = json.load(response)
-		count +=1	
-	
-		print data
-		sys.stderr.write("\rDownloaded: " + str(count))
+def printUsage():
+	print ""
+	output = "USAGE [TERM-FILE]"
+	print output
+	print ""
+	output = "\tTERM-FILE - text file containing terms to rank, one per line"
+	print output
+	print ""
+	print "\tNOTE: This program sends data to stdout, and status to stderr"
+	print ""
+
+def main():
+	count = 0
+	while True:
+		termFile = open(sys.argv[1])
+		for line in termFile:
+			response = urllib.urlopen("http://search.twitter.com/search.json?q="+line)
+			data = json.load(response)
+			count +=1	
 		
-	sys.stdout.flush()		
-	termFile.close()	
+			print data
+			sys.stderr.write("\rDownloaded: " + str(count))
+			
+		sys.stdout.flush()		
+		termFile.close()	
+if __name__ == '__main__':
+	main()
