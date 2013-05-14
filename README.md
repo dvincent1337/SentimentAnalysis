@@ -2,6 +2,7 @@ SentimentAnalysis
 =================
 
 Python project: Analysis of sentiments from twiter (and perhaps other sources later)
+
 Author: David Vincent
                                                                   
   This project will attempt to compare happiness of terms in tweets.
